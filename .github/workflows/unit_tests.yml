@@ -10,7 +10,8 @@ jobs:
   unit-tests:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Set Up JDK
         uses: actions/setup-java@v4
@@ -29,7 +30,8 @@ jobs:
           LOCAL_PROPERTIES: ${{ secrets.LOCAL_PROPERTIES }}
         run: echo $LOCAL_PROPERTIES > ./local.properties
 
-      - name: Testing the Builds
+      - name: Run Tests
         uses: reactivecircus/android-emulator-runner@v2
-        run: |
-          ./gradlew app:testDebugUnitTest app:connectedDebugAndroidTest
+        with:
+          api-level: 29
+          script: ./gradlew app:testDebugUnitTest app:connectedDebugAndroidTest

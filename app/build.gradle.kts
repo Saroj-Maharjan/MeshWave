@@ -6,6 +6,7 @@ plugins {
     id("com.squareup.sort-dependencies")
 }
 
+@Suppress("MagicNumber")
 android {
     namespace = "com.sawrose.meshwave"
     compileSdk = 34

@@ -30,5 +30,6 @@ jobs:
         run: echo $LOCAL_PROPERTIES > ./local.properties
 
       - name: Testing the Builds
+        uses: reactivecircus/android-emulator-runner@v2
         run: |
           ./gradlew app:testDebugUnitTest app:connectedDebugAndroidTest

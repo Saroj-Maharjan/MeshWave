@@ -32,4 +32,4 @@ jobs:
       - name: Build Project
         run: |
           ./gradlew allTests
-          ./gradlew android:app:test
+          ./gradlew app:test

@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MeshWave"
 include(":app")
- 
+include(":MeshWave")

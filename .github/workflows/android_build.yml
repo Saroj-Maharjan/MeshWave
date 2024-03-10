@@ -1,4 +1,4 @@
-name: Lint Checks
+name: Android Builds
 
 on:
   push:
